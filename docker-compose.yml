@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  book_catalog:
+    build: ./book_catalog
+    ports:
+      - "3001:8000" 
+    environment:
+      DATABASE_URL: "postgresql://projectpart3_vodc_user:HOHEGQ79BtvhqILVxKZRgCXfSzkAz7uN@dpg-cre5jolsvqrc73feu3m0-a.singapore-postgres.render.com/projectpart3_vodc"
+ 
+  inventory_management:
+    build: ./inventory_management
+    ports:
+      - "3002:8000" 
+    environment:
+      DATABASE_URL: "postgresql://projectpart3_vodc_user:HOHEGQ79BtvhqILVxKZRgCXfSzkAz7uN@dpg-cre5jolsvqrc73feu3m0-a.singapore-postgres.render.com/projectpart3_vodc"
